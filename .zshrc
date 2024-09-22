@@ -15,4 +15,3 @@ source $ZSH/oh-my-zsh.sh
 
 eval $(thefuck --alias)
 
-source $ZSH/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
