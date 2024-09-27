@@ -1,0 +1,52 @@
+{
+  "create module": {
+    "prefix": ["api:module"],
+    "body": [
+      "module $1 = {",
+      "\ttype argument = unit",
+      "\t@spice",
+      "\ttype response = unit",
+      "\ttype error = unit",
+      "\tlet config = () => {",
+      "\t\tkyInstance,",
+      "\t\tpath: `$2`,",
+      "\t\trequestOptions: {",
+      "\t\t\tmethod: Ky.HttpMethod.GET,",
+      "\t\t},",
+      "\t}",
+      "}"
+    ]
+  },
+  "create config": {
+    "prefix": ["api:config"],
+    "body": [
+      "let config: argument => requestConfig<error, response> = () => {",
+      "\tkyInstance,",
+      "\tpath: `$2`,",
+      "\trequestOptions: {",
+      "\t\tmethod: Ky.HttpMethod.GET,",
+      "\t},",
+      "}"
+    ]
+  },
+  "mapCustomErrors": {
+    "prefix": ["api:error"],
+    "body": [
+      "mapCustomErrors: error =>",
+      "\tswitch error {",
+      "\t\t| {response: Some(res)} =>",
+      "\t\tRequest.decodeResponseError(res, Error.t_decode)->Promise.map(decodedError => {",
+      "\t\tswitch decodedError {",
+      "\t\t\t| Ok(err) => Custom(err)",
+      "\t\t\t| Error(err) => DecodeError(err)",
+      "\t\t}",
+      "})",
+      "\t| _ => Unknown(error)->Promise.resolved",
+      "}"
+    ]
+  },
+  "react-intl formatted message": {
+    "prefix": ["intl:formatted"],
+    "body": "<FormattedMessage defaultMessage={\"$1\"} />"
+  }
+}
