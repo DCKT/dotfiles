@@ -11,6 +11,7 @@ alias vim=nvim
 alias gph="git push origin head"
 alias toolkit="cd $PROJECTS/front/rescript-toolkit/"
 alias api="cd $PROJECTS/front/api"
+alias dotfiles="cd $HOME/dotfiles/"
 export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(git zsh-autosuggestions thefuck ssh-agent)
