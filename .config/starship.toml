@@ -1,10 +1,10 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](color_orange)\
+[](color_yellow)\
 $os\
 $username\
-[](bg:color_yellow fg:color_orange)\
+[](bg:color_yellow fg:color_yellow)\
 $directory\
 [](fg:color_yellow bg:color_aqua)\
 $git_branch\
@@ -40,11 +40,11 @@ color_orange = '#d65d0e'
 color_purple = '#b16286'
 color_red = '#cc241d'
 color_yellow = '#d79921'
-color_dark = '#242424'
+color_dark = '#292929'
 
 [os]
-disabled = true
-style = "bg:color_orange fg:color_fg0"
+disabled = false
+style = "bg:color_yellow fg:color_bg1"
 
 [os.symbols]
 Windows = "󰍲"
@@ -70,8 +70,8 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = false
-style_user = "bg:color_orange fg:color_fg0"
-style_root = "bg:color_orange fg:color_fg0"
+style_user = "bg:color_yellow fg:color_fg0"
+style_root = "bg:color_yellow fg:color_fg0"
 format = '[ $user ]($style)'
 
 [directory]
