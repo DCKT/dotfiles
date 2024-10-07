@@ -49,6 +49,10 @@
     "prefix": ["intl:formatted"],
     "body": "<FormattedMessage defaultMessage={\"$1\"} />"
   },
+  "react-intl format  message": {
+    "prefix": ["intl:format"],
+    "body": "intl->Intl.formatMessage($1)"
+  },
   "request:fetcher": {
     "prefix": ["request:use"],
     "body": "let ($1, _, _) = Request.useFetcher(module($2), Some($3))"
