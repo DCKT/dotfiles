@@ -1,12 +1,12 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](color_yellow)\
+[](color_orange)\
 $os\
 $username\
-[](bg:color_yellow fg:color_yellow)\
+[](bg:color_orange fg:color_orange)\
 $directory\
-[](fg:color_yellow bg:color_aqua)\
+[](fg:color_orange bg:color_aqua)\
 $git_branch\
 $git_status\
 [](fg:color_aqua bg:color_blue)\
@@ -36,15 +36,15 @@ color_bg3 = '#665c54'
 color_blue = '#458588'
 color_aqua = '#689d6a'
 color_green = '#98971a'
-color_orange = '#d65d0e'
+color_orange = '#fab387'
 color_purple = '#b16286'
 color_red = '#cc241d'
 color_yellow = '#d79921'
-color_dark = '#292929'
-
+color_dark = '#1e1e2e'
+color_lavender = '#b4befe'
 [os]
 disabled = false
-style = "bg:color_yellow fg:color_bg1"
+style = "bg:color_orange fg:color_bg1"
 
 [os.symbols]
 Windows = "󰍲"
@@ -70,12 +70,12 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = false
-style_user = "bg:color_yellow fg:color_fg0"
-style_root = "bg:color_yellow fg:color_fg0"
+style_user = "bg:color_orange fg:color_fg0"
+style_root = "bg:color_orange fg:color_fg0"
 format = '[ $user ]($style)'
 
 [directory]
-style = "fg:color_dark bg:color_yellow"
+style = "fg:color_dark bg:color_orange"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -93,7 +93,7 @@ style = "bg:color_aqua bold"
 format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
 
 [git_status]
-style = "bg:color_aqua"
+style = "bg:color_aqua bold"
 format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
 
 [nodejs]
