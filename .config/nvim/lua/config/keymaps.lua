@@ -27,3 +27,6 @@ keymap.set("n", "<C-i>", ":ToggleTerm<Return>", opts)
 
 -- Package-info
 vim.api.nvim_set_keymap("n", "<leader>np", "<cmd>lua require('package-info').change_version()<cr>", opts)
+
+-- neo-tree
+keymap.set("n", "<C-d>", ":Neotree focus<Return>", opts)
