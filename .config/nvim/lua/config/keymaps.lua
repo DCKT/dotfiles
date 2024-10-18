@@ -30,3 +30,6 @@ vim.api.nvim_set_keymap("n", "<leader>np", "<cmd>lua require('package-info').cha
 
 -- neo-tree
 keymap.set("n", "<C-d>", ":Neotree focus<Return>", opts)
+
+-- oil
+keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
