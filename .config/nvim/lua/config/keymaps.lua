@@ -29,7 +29,22 @@ keymap.set("n", "<C-i>", ":ToggleTerm<Return>", opts)
 vim.api.nvim_set_keymap("n", "<leader>np", "<cmd>lua require('package-info').change_version()<cr>", opts)
 
 -- neo-tree
-keymap.set("n", "<C-d>", ":Neotree focus<Return>", opts)
+keymap.set("n", "<C-d>", function()
+  local function is_neo_tree_open()
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+      local buf = vim.api.nvim_win_get_buf(win)
+      if vim.bo[buf].filetype == "neo-tree" then
+        return true
+      end
+    end
+    return false
+  end
+  if is_neo_tree_open() then
+    vim.cmd("Neotree close")
+  else
+    vim.cmd("Neotree reveal")
+  end
+end, opts)
 
 -- oil
 keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
