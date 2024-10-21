@@ -64,6 +64,22 @@ config.keys = {
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{
+		mods = "ALT",
+		key = "-",
+		action = wezterm.action.SplitPane({
+			direction = "Up",
+			top_level = true,
+		}),
+	},
+	{
+		mods = "ALT",
+		key = "\\",
+		action = wezterm.action.SplitPane({
+			direction = "Right",
+			top_level = true,
+		}),
+	},
+	{
 		mods = "LEADER",
 		key = "n",
 		action = wezterm.action.ActivateTabRelative(1),
