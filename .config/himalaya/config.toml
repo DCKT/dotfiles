@@ -1,0 +1,19 @@
+[Personal]
+backend = "imap"
+email = "tqs.deconinck@gmail.com"
+default = true
+display-name = "Thomas Deconinck"
+imap-host = "imap.gmail.com"
+imap-port = 993
+imap-ssl = true
+imap-login = "tqs.deconinck@gmail.com"
+imap-auth = "passwd"
+sender = "smtp"
+smtp-host = "smtp.gmail.com"
+smtp-port = 465
+smtp-ssl = true
+smtp-login = "tqs.deconinck@gmail.com"
+smtp-auth = "passwd"
+
+[Personal.pgp]
+backend = "none"

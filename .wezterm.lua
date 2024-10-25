@@ -5,9 +5,9 @@ local config = wezterm.config_builder()
 
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
-	left = 2,
+	left = 4,
 	right = 2,
-	top = 0,
+	top = 4,
 	bottom = 0,
 }
 
