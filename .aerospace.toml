@@ -49,6 +49,8 @@ outer.right = 8
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
 [mode.main.binding]
+cmd-h = []
+cmd-alt-h = []
 alt-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
 
 alt-slash = 'layout tiles horizontal vertical'
@@ -112,3 +114,8 @@ alt-shift-l = ['join-with right', 'mode main']
 
 [exec.env-vars]
 PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Airmail'
+check-further-callbacks = true
+run = ['layout floating']
