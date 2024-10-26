@@ -3,7 +3,7 @@
 COUNT=$(himalaya -o json | jq length)
 
 if (($COUNT > 0)); then
-  sketchybar --set mail label=$COUNT
+  sketchybar --set mail background.drawing="on" background.color=$LAVENDER label=$COUNT
 else
   sketchybar --set mail background.drawing="off"
 fi
