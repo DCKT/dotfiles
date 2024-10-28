@@ -17,3 +17,20 @@ smtp-auth = "passwd"
 
 [Personal.pgp]
 backend = "none"
+
+[Work]
+backend = "imap"
+email = "thomas.deconinck@colisweb.com"
+default = true
+display-name = "Thomas Deconinck"
+imap-host = "imap.gmail.com"
+imap-port = 993
+imap-ssl = true
+imap-login = "thomas.deconinck@colisweb.com"
+imap-auth = "passwd"
+sender = "smtp"
+smtp-host = "smtp.gmail.com"
+smtp-port = 465
+smtp-ssl = true
+smtp-login = "thomas.deconinck@colisweb.com"
+smtp-auth = "passwd"
