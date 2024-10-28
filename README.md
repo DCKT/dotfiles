@@ -8,6 +8,7 @@
 4. [Aerospace](https://github.com/nikitabobko/AeroSpace) tiling window manager
 5. [Sketchybar](https://felixkratz.github.io/SketchyBar/) : custom menu bar
 6. [Himalaya](https://github.com/pimalaya/himalaya) : CLI email client
+7. [Starship](https://starship.rs/) : Cross-shell prompt
 
 ## Setup
 
