@@ -10,10 +10,10 @@ ICON_FONT="SF Pro"
 BAR_PROPS=(
   position=top
   height=40
-  blur_radius=30 
-  color=0x40000000 
-  corner_radius=8 
-  margin=8 
+  blur_radius=30
+  color=$BASE
+  corner_radius=8
+  margin=8
   y_offset=8
 )
 
@@ -39,27 +39,24 @@ sketchybar --default "${DEFAULT_PROPS[@]}"
 source "$CONFIG_DIR/items/aerospace.sh"
 
 sketchybar --add item chevron left \
-           --set chevron icon= label.drawing=off \
-           --add item front_app left \
-           --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
-           --subscribe front_app front_app_switched
+  --set chevron icon= label.drawing=off \
+  --add item front_app left \
+  --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
+  --subscribe front_app front_app_switched
 
 sketchybar --add item clock right \
-           --set clock update_freq=10 icon=  script="$PLUGIN_DIR/clock.sh" \
-           --add item volume right \
-           --set volume script="$PLUGIN_DIR/volume.sh" \
-           --subscribe volume volume_change \
-           --add item battery right \
-           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
-           --subscribe battery system_woke power_source_change \
-           --add item mail right \
-           --set mail update_freq=20 click_script="open /Applications/Airmail.app" label.padding_left=4 label.font="JetBrainsMonoNL Nerd Font Propo:Bold:16" background.corner_radius=6 background.height=26 icon.padding_left=10 background.color=0x44ffffff icon=  script="$PLUGIN_DIR/mail.sh"
+  --set clock update_freq=10 icon= script="$PLUGIN_DIR/clock.sh"
+
+source "$CONFIG_DIR/items/battery.sh"
+source "$CONFIG_DIR/items/volume.sh"
+source "$CONFIG_DIR/items/cpu.sh"
+source "$CONFIG_DIR/items/mail.sh"
 
 sketchybar --add item cat center \
-           --set cat icon="≽^•⩊•^≼"\
-                     icon.font="$ICON_FONT:Regular:18.0" \
-                     icon.color=$LAVENDER \
-                     label.draw=off
+  --set cat icon="≽^•⩊•^≼" \
+  icon.font="$ICON_FONT:Regular:18.0" \
+  icon.color=$LAVENDER \
+  label.draw=off
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update

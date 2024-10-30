@@ -17,7 +17,6 @@ export SKY=0xFF89dceb       #89dceb
 export SAPPHIRE=0xFF74c7ec  #74c7ec
 export BLUE=0xFF89b4fa      #89b4fa
 export LAVENDER=0xFFb4befe  #b4befe
-
-export BG_PRI_COLR=0xEE1e1e2e #1e1e2e
-export BG_SEC_COLR=0xFF313244 #313244
+export BASE=0xe61e1e2e      #1e1e2e
+export SURFACE=0xff45475a   #313244
 export ITEM_BG_COLOR=1xff2b1c84
