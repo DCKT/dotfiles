@@ -2,8 +2,8 @@
 
 source "$CONFIG_DIR/colors.sh"
 
-COUNT_PERSO=$(himalaya -a Personal -o json | jq length)
-COUNT_WORK=$(himalaya -a Work -o json | jq length)
+COUNT_PERSO=$(himalaya -a Personal -o json | jq '[.[] | select(.flags | length == 0)] | length')
+COUNT_WORK=$(himalaya -a Work -o json | jq '[.[] | select(.flags | length == 0)] | length')
 COUNT=$(($COUNT_WORK + $COUNT_PERSO))
 
 if (($COUNT > 0)); then
