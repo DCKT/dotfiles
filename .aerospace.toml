@@ -119,3 +119,8 @@ PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
 if.app-name-regex-substring = 'Airmail'
 check-further-callbacks = true
 run = ['layout floating']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'qemu-system-aarch64'
+check-further-callbacks = true
+run = ['layout tiling']
