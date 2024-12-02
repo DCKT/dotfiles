@@ -1,0 +1,10 @@
+{
+  "package.json api branch target address": {
+    "prefix": ["package:api-address"],
+    "body": "git+ssh://git@gitlab.com:colisweb-idl/colisweb/front/api.git#$1"
+  },
+  "package.json toolkit branch target address": {
+    "prefix": ["package:toolkit-address"],
+    "body": "git+ssh://git@gitlab.com:colisweb-idl/colisweb-open-source/rescript-toolkit.git#$1"
+  }
+}

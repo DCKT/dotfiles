@@ -7,7 +7,7 @@
       "\t@spice",
       "\ttype response = unit",
       "\ttype error = unit",
-      "\tlet config = () => {",
+      "\tlet config: argument => Request.requestConfig<error, response> = () => {",
       "\t\tkyInstance,",
       "\t\tpath: `$2`,",
       "\t\trequestOptions: {",
