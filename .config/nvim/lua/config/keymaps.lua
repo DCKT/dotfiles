@@ -45,6 +45,3 @@ keymap.set("n", "<C-d>", function()
     vim.cmd("Neotree reveal")
   end
 end, opts)
-
--- oil
-keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
