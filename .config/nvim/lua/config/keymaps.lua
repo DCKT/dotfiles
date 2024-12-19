@@ -18,18 +18,15 @@ keymap.set("n", "<C-k>", function()
   vim.diagnostic.goto_next()
 end)
 
--- New tab
-keymap.set("n", "te", "tabedit", opts)
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-
 -- Toggle term
-keymap.set("n", "<C-i>", ":ToggleTerm<Return>", opts)
+vim.keymap.set({ "n", "t" }, "<leader>t", "<cmd>:ToggleTerm<cr>", opts)
 
 -- Package-info
 vim.api.nvim_set_keymap("n", "<leader>np", "<cmd>lua require('package-info').change_version()<cr>", opts)
 
 -- neo-tree
-keymap.set("n", "<C-d>", function()
+-- With toggle implemention
+keymap.set("n", "<C-p>", function()
   local function is_neo_tree_open()
     for _, win in ipairs(vim.api.nvim_list_wins()) do
       local buf = vim.api.nvim_win_get_buf(win)
@@ -45,3 +42,8 @@ keymap.set("n", "<C-d>", function()
     vim.cmd("Neotree reveal")
   end
 end, opts)
+
+-- Run lua code from current line
+keymap.set("n", "<space>y", ":.lua<CR>", opts)
+-- Run lua code from current selection
+keymap.set("v", "<space>y", ":lua<CR>", opts)
