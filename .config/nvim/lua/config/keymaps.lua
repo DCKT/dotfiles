@@ -18,8 +18,10 @@ keymap.set("n", "<C-k>", function()
   vim.diagnostic.goto_next()
 end)
 
--- Toggle term
-vim.keymap.set({ "n", "t" }, "<leader>t", "<cmd>:ToggleTerm<cr>", opts)
+-- ToggleTerm
+keymap.set({ "n", "t" }, "<Tab>", "<cmd>:ToggleTerm<CR>", opts)
+-- Display lsp info popover
+keymap.set({ "n" }, "<C-i>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 
 -- Package-info
 vim.api.nvim_set_keymap("n", "<leader>np", "<cmd>lua require('package-info').change_version()<cr>", opts)
