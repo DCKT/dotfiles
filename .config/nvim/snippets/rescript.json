@@ -60,5 +60,13 @@
   "request:fetch": {
     "prefix": ["request:fetch"],
     "body": "Request.fetchAPI(module($1), $2)"
+  },
+  "useState": {
+    "prefix": ["use:state"],
+    "body": "let ($1, $2) = React.useState(() => $3)"
+  },
+  "useEffect": {
+    "prefix": ["use:effect"],
+    "body": ["React.useEffect(() => {", "\t$1", "\tNone", "}, [])"]
   }
 }
