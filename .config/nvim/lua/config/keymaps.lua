@@ -22,6 +22,8 @@ end)
 keymap.set({ "n", "t" }, "<Tab>", "<cmd>:ToggleTerm<CR>", opts)
 -- Display lsp info popover
 keymap.set({ "n" }, "<C-i>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+-- Open telescope with LSP document symbols
+vim.api.nvim_set_keymap("n", "<leader>sp", "<cmd>Telescope lsp_document_symbols<cr>", opts)
 
 -- Package-info
 vim.api.nvim_set_keymap("n", "<leader>np", "<cmd>lua require('package-info').change_version()<cr>", opts)
