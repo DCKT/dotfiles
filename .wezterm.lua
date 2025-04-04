@@ -81,11 +81,6 @@ config.keys = {
 	},
 	{
 		mods = "LEADER",
-		key = "n",
-		action = wezterm.action.ActivateTabRelative(1),
-	},
-	{
-		mods = "LEADER",
 		key = "Escape",
 		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
@@ -135,4 +130,14 @@ config.keys = {
 		action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
 	},
 }
+
+for i = 1, 5 do
+	-- CTRL+ALT + number to activate that tab
+	table.insert(config.keys, {
+		key = tostring(i),
+		mods = "CTRL",
+		action = wezterm.action.ActivateTab(i - 1),
+	})
+end
+
 return config

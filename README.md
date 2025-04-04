@@ -9,6 +9,7 @@
 5. [Sketchybar](https://felixkratz.github.io/SketchyBar/) : custom menu bar
 6. [Himalaya](https://github.com/pimalaya/himalaya) : CLI email client
 7. [Starship](https://starship.rs/) : Cross-shell prompt
+8. [https://meetingbar.app/](meetingbar): Meeting app + apple shortcuts
 
 ## Setup
 
