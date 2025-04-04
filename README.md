@@ -16,6 +16,11 @@
 1. Clone this repo.
 2. Install all the requirements
 3. Run the stow command
+4. Append the alias file to `.zshrc`
+
+```bash
+source "$HOME/.zshrc_alias"
+```
 
 ```sh
 stow .
