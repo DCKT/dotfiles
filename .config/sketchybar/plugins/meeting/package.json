@@ -1,0 +1,19 @@
+{
+  "name": "meeting",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0"
+  },
+  "scripts": {
+    "build": "bun build ./index.ts --compile --outfile getnextmeeting"
+  }
+}
+
