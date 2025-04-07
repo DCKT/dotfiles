@@ -2,7 +2,7 @@
 export ENV="local"
 export NINJA_ANSI_FORCED=1
 export PROJECTS="$HOME/Projects"
-export DISABLE_UPDATE_PROMPT=true
+export DISABLE_UPDATE_PROMPT="true"
 
 # ALIAS
 alias n=nvim

@@ -49,7 +49,7 @@ if (nextEvent.title === "") {
     `icon.background.color=${FLAMINGO}`,
     "icon.font.size=14.0",
     "icon.padding_right=4",
-    "icon.padding_left=6",
+    "icon.padding_left=8",
     `icon.color=${BASE}`,
     "icon.background.corner_radius=1",
     "label.background.corner_radius=2",
@@ -74,4 +74,3 @@ if (nextEvent.title === "") {
     "label.font.size=14.0",
   ]);
 }
-
