@@ -54,3 +54,5 @@ zinit light starship/starship
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 eval "$(starship init zsh)"
+eval "$(fnm env --use-on-cd)"
+
