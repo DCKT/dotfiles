@@ -18,6 +18,9 @@ alias zscaler-start="open -a /Applications/Zscaler/Zscaler.app --hide; sudo find
 alias zscaler-stop="find /Library/LaunchAgents -name '*zscaler*' -exec launchctl unload {} \;;sudo find /Library/LaunchDaemons -name '*zscaler*' -exec launchctl unload {} \;"
 alias gbname="git rev-parse --abbrev-ref HEAD"
 
+alias ll="ls -l"
+alias la='ls -lAFh' 
+
 # Yazi shell wrapper
 # Change the CWD on exit
 function y() {
@@ -35,3 +38,19 @@ function cleanNodeModules() {
   echo "Tous les dossiers node_modules ont été supprimés."
 }
 
+## Package manager
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+### Plugins
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-syntax-highlighting
+zi snippet OMZP::git
+zinit light starship/starship
+
+# Completion 
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+eval "$(starship init zsh)"
