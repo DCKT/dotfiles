@@ -3,6 +3,9 @@ return {
   opts = {
     window = {
       position = "float",
+      popup = {
+        size = "80%",
+      },
     },
     filesystem = {
       filtered_items = {

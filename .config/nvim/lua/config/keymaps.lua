@@ -12,18 +12,18 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_prev()
+  vim.diagnostic.jump({ count = -1, float = true })
 end)
 keymap.set("n", "<C-k>", function()
-  vim.diagnostic.goto_next()
+  vim.diagnostic.jump({ count = 1, float = true })
 end)
 
 -- ToggleTerm
 keymap.set({ "n", "t" }, "<Tab>", "<cmd>:ToggleTerm<CR>", opts)
--- Display lsp info popover
-keymap.set({ "n" }, "<C-i>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+
 -- Open telescope with LSP document symbols
-vim.api.nvim_set_keymap("n", "<leader>sp", "<cmd>Telescope lsp_document_symbols<cr>", opts)
+vim.api.nvim_set_keymap("n", "<leader>sp", "<cmd>FzfLua lsp_document_symbols<cr>", opts)
+vim.api.nvim_set_keymap("n", "<leader>sn", "<cmd>FzfLua git_status<cr>", opts)
 
 -- Package-info
 vim.api.nvim_set_keymap("n", "<leader>np", "<cmd>lua require('package-info').change_version()<cr>", opts)
