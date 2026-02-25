@@ -10,6 +10,7 @@
 6. [Himalaya](https://github.com/pimalaya/himalaya) : CLI email client
 7. [Starship](https://starship.rs/) : Cross-shell prompt
 8. [https://meetingbar.app/](meetingbar): Meeting app + apple shortcuts
+9. [https://github.com/eza-community/eza?tab=readme-ov-file](eza): better ls
 
 ## Setup
 

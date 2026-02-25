@@ -7,6 +7,7 @@ export DISABLE_UPDATE_PROMPT="true"
 # ALIAS
 alias n=nvim
 alias vim=nvim
+alias t=tmux
 alias gph="git push origin head"
 alias gms="git merge --squash"
 alias toolkit="cd $PROJECTS/front/rescript-toolkit/"
@@ -20,6 +21,9 @@ alias gbname="git rev-parse --abbrev-ref HEAD"
 
 alias ll="ls -l"
 alias la='ls -lAFh' 
+alias ls="eza"
+
+alias server="python -m SimpleHTTPServer 9000"
 
 # Yazi shell wrapper
 # Change the CWD on exit
@@ -30,6 +34,11 @@ function y() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+}
+
+function glup() {
+  local branch="$(git branch --show-current)"
+  git branch --set-upstream-to=origin/$branch $branch && git pull
 }
 
 function cleanNodeModules() {
