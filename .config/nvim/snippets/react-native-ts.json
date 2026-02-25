@@ -1,0 +1,10 @@
+{
+  "react-intl formatted message": {
+    "prefix": ["intl:formatted"],
+    "body": "<FormattedMessage defaultMessage={\"$1\"} />"
+  },
+  "react-intl format  message": {
+    "prefix": ["intl:format"],
+    "body": "intl->Intl.formatMessage($1)"
+  }
+}

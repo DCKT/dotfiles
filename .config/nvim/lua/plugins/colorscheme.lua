@@ -5,6 +5,7 @@ return {
     priority = 1000,
 
     opts = {
+      transparent_background = true,
       styles = {
         functions = { "italic" },
         booleans = { "bold" },
