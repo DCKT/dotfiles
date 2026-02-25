@@ -1,0 +1,20 @@
+# ~/.config/ghostty/config
+
+# Appearance
+background = 282c35
+foreground = c6a0f6
+theme = "Catppuccin Frappe"
+background-opacity = 0.92
+background-blur-radius = 15
+macos-titlebar-style= hidden
+window-decoration = auto
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = false
+
+# Font
+font-family = "JetBrainsMono Nerd Font"
+font-size = 15.0
+
+keybind = ctrl+g>r=reload_config
+
