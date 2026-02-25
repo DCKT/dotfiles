@@ -12,9 +12,9 @@ BAR_PROPS=(
   height=40
   blur_radius=30
   color=$BASE
-  corner_radius=8
-  margin=8
-  y_offset=8
+  corner_radius=0
+  margin=0
+  y_offset=0
 )
 
 sketchybar --bar "${BAR_PROPS[@]}"
@@ -22,7 +22,7 @@ sketchybar --bar "${BAR_PROPS[@]}"
 ##### Changing Defaults #####
 DEFAULT_PROPS=(
   padding_left=5
-  padding_right=5
+  padding_right=0
   icon.font="$FONT:Bold:16.0"
   label.font="$FONT:Bold:16.0"
   icon.color=$WHITE
@@ -44,7 +44,7 @@ sketchybar --add item chevron left \
   --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
   --subscribe front_app front_app_switched
 
-sketchybar --add item clock center \
+sketchybar --add item clock q \
   --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh"
 
 source "$CONFIG_DIR/items/meeting.sh"

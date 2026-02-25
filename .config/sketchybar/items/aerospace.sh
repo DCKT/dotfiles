@@ -3,7 +3,7 @@
 sketchybar --add event aerospace_workspace_change
 
 STYLE=(
-  background.color=$MAUVE
+  background.color=$FLAMINGO
   background.corner_radius=4
   label.color=$WHITE
   label.padding_left=2

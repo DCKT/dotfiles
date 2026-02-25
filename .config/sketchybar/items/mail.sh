@@ -10,7 +10,7 @@ STYLE=(
 )
 
 sketchybar --add item mail right \
-  --set mail update_freq=20 click_script="open /Applications/Airmail.app" \
+  --set mail update_freq=20 click_script="open /Applications/Spark\ Desktop.app" \
   icon= \
   script="$PLUGIN_DIR/mail.sh" \
   "${STYLE[@]}"

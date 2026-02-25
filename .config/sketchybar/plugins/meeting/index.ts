@@ -13,7 +13,7 @@ const now = new Date();
 const WHITE = "0xffffffff";
 const FLAMINGO = "0xFFf2cdcd"; // #f2cdcd
 const BASE = "0xe61e1e2e"; // #1e1e2e
-const SURFACE = "0xff45475a"; // #313244
+const SURFACE = "0x9c623b20"; // #313244
 
 if (nextEvent.title === "") {
   Bun.spawn([
@@ -35,10 +35,10 @@ if (nextEvent.title === "") {
     "icon.background.height=26",
     `icon.background.color=${FLAMINGO}`,
     "icon.font.size=14.0",
-    "icon.padding_right=4",
+    "icon.padding_right=8",
     "icon.padding_left=8",
     `icon.color=${BASE}`,
-    "icon.background.corner_radius=1",
+    "icon.background.corner_radius=2",
     "label.background.corner_radius=2",
     "label.background.height=24",
     "label.padding_left=8",
