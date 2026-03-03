@@ -22,6 +22,7 @@ alias gbname="git rev-parse --abbrev-ref HEAD"
 alias ll="ls -l"
 alias la='ls -lAFh' 
 alias ls="eza"
+alias cat="bat"
 
 alias server="python -m SimpleHTTPServer 9000"
 
