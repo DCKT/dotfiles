@@ -17,4 +17,5 @@ font-family = "JetBrainsMono Nerd Font"
 font-size = 15.0
 
 keybind = ctrl+g>r=reload_config
+keybind = cmd+t=unbind
 
