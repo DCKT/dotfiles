@@ -1,33 +1,34 @@
-blacklist = ["scratch"]
-
-[[session]]
-name = "Downloads 📥"
-path = "~/Downloads"
+blacklist = ["scratch", "claude-*", "opencode-*"]
 
 [[session]]
 name = "bo-admin"
 path = "~/Projects/front/bo-admin"
 startup_command = "n"
+windows = ["api"]
 
 [[session]]
 name = "bo-hub"
 path = "~/Projects/front/bo-hub"
 startup_command = "n"
+windows = ["api"]
 
 [[session]]
 name = "bo-transporter"
 path = "~/Projects/front/bo-transporter"
 startup_command = "n"
+windows = ["api"]
 
 [[session]]
 name = "bo-store"
 path = "~/Projects/front/bo-store"
 startup_command = "n"
+windows = ["api"]
 
 [[session]]
 name = "bo-client"
 path = "~/Projects/front/bo-client"
 startup_command = "n"
+windows = ["api"]
 
 [[session]]
 name = "bo-visibility"
@@ -38,6 +39,7 @@ startup_command = "n"
 name = "midgard"
 path = "~/Projects/front/midgard/"
 startup_command = "n"
+windows = ["api"]
 
 [[session]]
 name = "courier app"
@@ -61,3 +63,8 @@ path = "~/Projects/perso/"
 [[session]]
 name = "e2e"
 path = "~/Projects/e2e-tests/"
+
+[[window]]
+name = "api"
+path = "~/Projects/front/api"
+startup_script = "n"

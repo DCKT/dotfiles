@@ -23,6 +23,7 @@ return {
         aerial = true,
         alpha = true,
         cmp = true,
+        blink_cmp = { style = "bordered" },
         dashboard = true,
         flash = true,
         fzf = true,
@@ -47,11 +48,6 @@ return {
       },
     },
   },
-  -- {
-  --   "folke/tokyonight.nvim",
-  --   lazy = true,
-  --   opts = { style = "moon", transparent = true },
-  -- },
   {
     "LazyVim/LazyVim",
     opts = {

@@ -13,3 +13,4 @@ vim.opt.smartcase = true -- case sensitive if uppercase in string
 vim.g.snacks_animate = false
 
 vim.opt.swapfile = false
+vim.lsp.completion.enable(false)
