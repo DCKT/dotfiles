@@ -10,10 +10,10 @@ ICON_FONT="SF Pro"
 BAR_PROPS=(
   position=top
   height=36
-  blur_radius=30
+  # blur_radius=30
   color=0x00000000
   corner_radius=14
-  margin=6
+  margin=0
   y_offset=6
 )
 
@@ -21,8 +21,8 @@ sketchybar --bar "${BAR_PROPS[@]}"
 
 ##### Changing Defaults #####
 DEFAULT_PROPS=(
-  padding_left=5
-  padding_right=0
+  padding_left=6
+  padding_right=6
   icon.font="$FONT:Bold:16.0"
   label.font="$FONT:Bold:16.0"
   icon.color=$WHITE
@@ -44,7 +44,7 @@ sketchybar --add item chevron left \
   --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
   --subscribe front_app front_app_switched
 
-sketchybar --add item clock center \
+sketchybar --add item clock q \
   --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh"
 
 source "$CONFIG_DIR/items/meeting.sh"
@@ -55,13 +55,13 @@ source "$CONFIG_DIR/items/mail.sh"
 
 ##### Section brackets #####
 sketchybar --add bracket left_section '/space\..*/' chevron front_app \
-  --set left_section background.color=$BASE background.corner_radius=8 background.height=28
+  --set left_section background.color=$BASE background.corner_radius=8 background.height=28 padding_left=0 padding_right=0
 
 sketchybar --add bracket center_section clock \
   --set center_section background.color=$BASE background.corner_radius=8 background.height=28
 
 sketchybar --add bracket right_section meeting battery volume cpu mail \
-  --set right_section background.color=$BASE background.corner_radius=8 background.height=28
+  --set right_section padding_left=0 padding_right=0
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update

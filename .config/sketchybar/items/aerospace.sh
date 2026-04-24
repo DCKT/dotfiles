@@ -4,11 +4,11 @@ sketchybar --add event aerospace_workspace_change
 
 STYLE=(
   background.color=$FLAMINGO
-  background.corner_radius=4
+  background.corner_radius=6
   label.color=$WHITE
   label.padding_left=2
   label.padding_right=8
-  background.height=24
+  background.height=20
   background.drawing=on
 )
 
