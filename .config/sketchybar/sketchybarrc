@@ -9,12 +9,12 @@ ICON_FONT="SF Pro"
 ##### Bar Appearance #####
 BAR_PROPS=(
   position=top
-  height=40
+  height=36
   blur_radius=30
   color=$BASE
-  corner_radius=0
-  margin=0
-  y_offset=0
+  corner_radius=14
+  margin=6
+  y_offset=6
 )
 
 sketchybar --bar "${BAR_PROPS[@]}"
