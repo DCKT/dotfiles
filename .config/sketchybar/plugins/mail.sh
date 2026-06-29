@@ -7,7 +7,15 @@ COUNT_WORK=$(himalaya -a Work -o json | jq '[.[] | select(.flags | length == 0)]
 COUNT=$(($COUNT_WORK + $COUNT_PERSO))
 
 if (($COUNT > 0)); then
-  sketchybar --set mail background.drawing="on" icon.color=$BASE label.padding_right=8 label.color=$BASE label=$COUNT
+  sketchybar --set mail \
+    background.color=$FLAMINGO \
+    icon.color=$BASE \
+    label.padding_right=8 \
+    label.color=$BASE \
+    label=$COUNT
 else
-  sketchybar --set mail background.color=$SURFACE label="" icon.color=$WHITE
+  sketchybar --set mail \
+    background.color=$SURFACE \
+    label="" \
+    icon.color=$WHITE
 fi

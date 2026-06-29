@@ -10,11 +10,10 @@ ICON_FONT="SF Pro"
 BAR_PROPS=(
   position=top
   height=36
-  # blur_radius=30
   color=0x00000000
-  corner_radius=14
+  corner_radius=0
   margin=0
-  y_offset=6
+  y_offset=4
 )
 
 sketchybar --bar "${BAR_PROPS[@]}"
@@ -47,11 +46,11 @@ sketchybar --add item chevron left \
 sketchybar --add item clock q \
   --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh"
 
-source "$CONFIG_DIR/items/meeting.sh"
 source "$CONFIG_DIR/items/battery.sh"
 source "$CONFIG_DIR/items/volume.sh"
 source "$CONFIG_DIR/items/cpu.sh"
 source "$CONFIG_DIR/items/mail.sh"
+source "$CONFIG_DIR/items/meeting.sh"
 
 ##### Section brackets #####
 sketchybar --add bracket left_section '/space\..*/' chevron front_app \
