@@ -14,3 +14,4 @@ vim.g.snacks_animate = false
 
 vim.opt.swapfile = false
 vim.lsp.completion.enable(false)
+vim.opt.exrc = true
